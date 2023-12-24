@@ -49,6 +49,7 @@
 .inner {
     display: flex;
     margin: auto;
+    padding: auto;
     width: 100%;
     justify-content: center;
     /* align-items: center; */

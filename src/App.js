@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import Home from "./components/homepage";
+import Home from "./components/Home";
 import DefaultPage from "./components/test";
 import {
   BrowserRouter as Router,

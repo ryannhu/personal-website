@@ -1,0 +1,26 @@
+.right {
+    height: 100vh;
+    margin-top: -1%;
+}
+
+.intro {
+    padding-top: 12%;
+    padding-left: 40%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    /* font-style:  */
+}
+
+.name {
+    font-size: 3.4rem;
+    font-variation-settings: 'wght' 450;
+    margin-top: -6%;
+    margin-bottom: -3%;
+}
+
+.hello {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    margin-right: 24.8%;
+    color: rgb(45, 44, 44)
+}

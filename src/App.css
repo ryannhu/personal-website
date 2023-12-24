@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Montserrat';
 }
 
 .App-logo {
@@ -36,3 +37,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Regular'), url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype'),
+       local('Montserrat Italic'), url(./fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 1000; /* Specify weight axis range */
+  /* font-stretch: 1 100%; Specify width/stretch axis range */
+  /* You can specify font-weight and font-style here if needed */
+}
+

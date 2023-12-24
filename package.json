@@ -1,26 +1,30 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "https://ryannhu.github.io/personal-website/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "netlify-cli": "^17.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
+    "react-type-animation": "^3.2.0",
+    "serve": "^14.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "npm run format && react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "node generateRedirects.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
-    "deploy": "gh-pages -d build",
+    "deploy": "npx netlify deploy --prod",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
