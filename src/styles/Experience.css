@@ -1,5 +1,13 @@
 .exp-container {
-  height: 100vh;
+  opacity: 0;
+  transform: translateY(400px);
+  transition: opacity 0.5s ease, transform 2s ease;
+  height: 40vh;
+}
+
+.exp-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .vertical-tabs {
@@ -27,6 +35,10 @@
 .tab-button.active {
   background-color: #ccc;
   font-weight: bold;
+}
+
+.tab-button.hover {
+  background-color: #9fc70d;
 }
 
 .styledTabPanels {

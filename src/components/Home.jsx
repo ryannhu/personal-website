@@ -2,7 +2,10 @@ import React from "react";
 import About from "./About";
 import Experience from "./Experience";
 import Introduction from "./Introduction";
-import "./Home.css";
+import Projects from "./Projects";
+import Footer from "./Footer";
+import Contact from "./Contact";
+import "../styles/Home.css";
 
 const Home = () => {
   return (
@@ -14,6 +17,9 @@ const Home = () => {
       <div>
         <Experience />
       </div>
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 };

@@ -1,12 +1,13 @@
 /* eslint-disable */
 import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
-import "./Experience.css";
+import "../styles/Experience.css";
+import { useInView } from "react-intersection-observer";
 
 const data = [
   {
     a: "Zomp",
-    content: "I did this 1",
+    content: "I did this!",
   },
   {
     a: "JSI Telecom",
@@ -29,10 +30,16 @@ const data = [
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [transition, setTransition] = useState(false);
+  const [hoverTab, setHoverTab] = useState(false);
   const nodeRef = useRef(null);
   {
     console.log(transition);
   }
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.1, // Adjust as needed, represents the percentage of the element's visibility
+  });
 
   useEffect(() => {
     setTransition(true);
@@ -43,37 +50,41 @@ const Experience = () => {
   }, [activeTab]);
 
   return (
-    <div>
-      <div className="exp-container">
-        <h2>Experience</h2>
-        <div className="inner">
-          <div className="vertical-tabs">
-            {data.map((node, i) => {
-              console.log(node);
-              const value = node.a;
-              return (
-                <button
-                  key={i}
-                  onClick={() => setActiveTab(i)}
-                  className={
-                    i == activeTab ? "tab-button active" : "tab-button"
-                  }
-                >
-                  {value} {i}
-                </button>
-              );
-            })}
+    <div className={`exp-container ${inView ? "visible" : ""}`} ref={ref}>
+      <h1>Experience</h1>
+      <div className="inner">
+        <div className="vertical-tabs">
+          {data.map((node, i) => {
+            console.log(node);
+            const value = node.a;
+            return (
+              <button
+                key={i}
+                onClick={() => setActiveTab(i)}
+                onMouseOver={() => setHoverTab(i)}
+                onMouseOut={() => setHoverTab(-1)}
+                className={
+                  i == activeTab
+                    ? "tab-button active"
+                    : i == hoverTab
+                      ? "tab-button hover"
+                      : "tab-button"
+                }
+              >
+                {value}
+              </button>
+            );
+          })}
 
-            {/* <button className="tab-button">Tab 2</button>
+          {/* <button className="tab-button">Tab 2</button>
           <button className="tab-button">Tab 3</button> */}
-          </div>
-          <div className="styledTabPanels">
-            <CSSTransition ref={nodeRef} in={transition} classNames="fade">
-              <div ref={nodeRef} className="styledTabPanel">
-                <p>{data[activeTab].content}</p>
-              </div>
-            </CSSTransition>
-          </div>
+        </div>
+        <div className="styledTabPanels">
+          <CSSTransition ref={nodeRef} in={transition} classNames="fade">
+            <div ref={nodeRef} className="styledTabPanel">
+              <p>{data[activeTab].content}</p>
+            </div>
+          </CSSTransition>
         </div>
       </div>
     </div>

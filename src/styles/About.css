@@ -1,0 +1,52 @@
+/* About.css */
+.about {
+    opacity: 0;
+    transform: translateY(400px); /* Initially move the element down */
+    transition: opacity 0.5s ease, transform 2s ease;
+    height: 75vh;
+  }
+
+  .about.about-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.container-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.item1 {
+    order: 2;
+    /* flex: 2 0 0; */
+    flex: 1;
+    padding: 2%;
+    /* width: 300%;
+    height: auto; */
+    padding-right: 30%;
+}
+
+.item2 {
+    order: 0;
+    /* padding-left: 50%  */
+    flex: 4;
+    margin: auto;
+    padding: 2%;
+}
+
+.myimg img{
+    width: 250%;
+    height: auto; 
+    /* max-width: 100%; */
+    display: block; 
+    border: 5px solid #555;
+    /* margin-top: -200px;  */
+    /* margin-top: %; */
+    /* padding-left: 10%; */
+}

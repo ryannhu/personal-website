@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "./components/Home";
 import DefaultPage from "./components/test";
 import {
@@ -11,6 +11,10 @@ import {
 import LoadingSpinner from "./components/loading";
 
 function App() {
+  useEffect(() => {
+    document.title = "Ryan Hu";
+  }, []);
+
   return (
     <Router>
       <div className="App">
