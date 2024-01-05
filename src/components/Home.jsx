@@ -10,16 +10,24 @@ import "../styles/Home.css";
 const Home = () => {
   return (
     <div className="home">
-      <Introduction />
-      <div>
+      <div className="flex-items">
+        <Introduction />
+      </div>
+      <div className="flex-items">
         <About />
       </div>
-      <div>
+      <div className="flex-items">
         <Experience />
       </div>
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="flex-items">
+        <Projects />
+      </div>
+      <div className="flex-items">
+        <Contact />
+      </div>
+      <div className="flex-items">
+        <Footer />
+      </div>
     </div>
   );
 };
