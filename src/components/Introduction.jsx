@@ -1,5 +1,5 @@
 import React from "react";
-import DefaultPage from "./test";
+import Brain from "./test";
 import { TypeAnimation } from "react-type-animation";
 import "../styles/Introduction.css";
 
@@ -8,7 +8,7 @@ const Introduction = () => {
     <div className="container">
       <div className="left">
         {/* <p>text</p> */}
-          <DefaultPage />
+        <Brain />
       </div>
       <div className="right">
         <div className="intro">
