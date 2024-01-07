@@ -1,7 +1,4 @@
 const brainData = {
-  economics: [
-    {
-      settings: [1, 0, 30, 2, 2, 30, 5],
       paths: [
         [
           0.0038, 0.0749, 0.0085, 0.003, 0.071, 0.0009, 0.0051, 0.0681, -0.0069,
@@ -965,8 +962,6 @@ const brainData = {
           -0.0294,
         ],
       ],
-    },
-  ],
 };
 
 export default brainData;

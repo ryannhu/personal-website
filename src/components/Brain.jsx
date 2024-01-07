@@ -1,39 +1,18 @@
 /* eslint-disable */
 import React, { useRef } from "react";
-import brainData from "./data";
-const brain = brainData.economics[0].paths;
-import "../styles/test.css";
+import brainData from "./BraInData";
+import "../styles/Brain.css";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PresentationControls } from "@react-three/drei";
 import { shaderMaterial } from "@react-three/drei";
 import * as THREE from "three";
-
-const RandomRange = (min, max) => {
-  return Math.random() * (max - min) + min;
-};
-
-let curves = [];
-for (let i = 0; i < 100; ++i) {
-  let points = [];
-  let length = RandomRange(0.1, 1);
-  for (let j = 0; j < 100; ++j) {
-    points.push(
-      new THREE.Vector3().setFromSphericalCoords(
-        1,
-        Math.PI - (j / 100) * Math.PI * length,
-        (i / 100) * Math.PI * 2,
-      ),
-    );
-  }
-  let tempcurve = new THREE.CatmullRomCurve3(points);
-  curves.push(tempcurve);
-}
+import RotatingGroup from "./RotatingGroup";
 
 let brainCurves = [];
+const brain = brainData.paths;
 
 brain.forEach((path) => {
   let points = [];
-  console.log(path);
   for (let i = 0; i < path.length; i += 3) {
     points.push(new THREE.Vector3(path[i], path[i + 1], path[i + 2]));
   }
@@ -111,17 +90,24 @@ const Tubes = () => {
 const Brain = () => {
   return (
     <div className="test-container">
-      <Canvas camera={[0, 0, 0.3]}>
-        {/* <color attach="background" args={["black"]} /> */}
+
+      <Canvas camera={{position:[0, 0, 0.3], zoom: 1.5}}>
+
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <mesh>
-          {/* <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="hotpink" /> */}
-        </mesh>
-        {/* <Tube curve={2}/> */}
+        <PresentationControls
+          global
+          config={{ mass: 4, tension: 400 }}
+          snap={{ mass: 2, tension: 300 }}
+          rotation={[0, 0.4, 0.2]}
+          polar={[-Math.PI / 3, Math.PI / 3]}
+          azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+        >
+          <RotatingGroup>
         <Tubes />
-        <OrbitControls />
+        </RotatingGroup>
+        </PresentationControls>
+        {/* <OrbitControls /> */}
       </Canvas>
     </div>
   );

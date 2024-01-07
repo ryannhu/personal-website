@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import Home from "./components/Home";
-import DefaultPage from "./components/test";
+import DefaultPage from "./components/Brain";
 import {
   BrowserRouter as Router,
   Route,

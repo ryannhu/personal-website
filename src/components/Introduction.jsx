@@ -1,5 +1,5 @@
 import React from "react";
-import Brain from "./test";
+import Brain from "./Brain";
 import { TypeAnimation } from "react-type-animation";
 import "../styles/Introduction.css";
 
