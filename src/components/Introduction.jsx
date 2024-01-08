@@ -5,7 +5,7 @@ import "../styles/Introduction.css";
 
 const Introduction = () => {
   return (
-    <div className="container">
+    <div className="intro-container">
       <div className="left">
         {/* <p>text</p> */}
         <Brain />

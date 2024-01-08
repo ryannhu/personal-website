@@ -19,7 +19,7 @@ const About = () => {
             </div>
           </div>
           <div className="item2">
-            <h1>About Me</h1>
+            <h1>1 - About Me</h1>
             <p>
               Hi! My name is Ryan Hu and I&#39;m a computer science student at
               the University of Waterloo (2021 - 2026).

@@ -64,15 +64,15 @@ const Tube = ({ inCurve }) => {
   return (
     <mesh>
       <tubeGeometry args={[inCurve, 64, 0.001, 2, false]} />
-      <brainMaterial 
-      ref={BrainMat} 
-      side={THREE.DoubleSide}
-      transparent={true}
-      depthTest={false}
-      depthWrite={false}
-      blending={THREE.AdditiveBlending}
-      // wireframe={true}
-       />
+      <brainMaterial
+        ref={BrainMat}
+        side={THREE.DoubleSide}
+        transparent={true}
+        depthTest={false}
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
+        // wireframe={true}
+      />
     </mesh>
   );
 };
@@ -90,9 +90,7 @@ const Tubes = () => {
 const Brain = () => {
   return (
     <div className="test-container">
-
-      <Canvas camera={{position:[0, 0, 0.3], zoom: 1.5}}>
-
+      <Canvas camera={{ position: [0, 0, 0.3], zoom: 1.5 }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <PresentationControls
@@ -104,8 +102,8 @@ const Brain = () => {
           azimuth={[-Math.PI / 1.4, Math.PI / 2]}
         >
           <RotatingGroup>
-        <Tubes />
-        </RotatingGroup>
+            <Tubes />
+          </RotatingGroup>
         </PresentationControls>
         {/* <OrbitControls /> */}
       </Canvas>

@@ -1,4 +1,4 @@
-.container {
+.intro-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
@@ -55,13 +55,20 @@
     /* padding-left: 10%; */
 }
 
+@media screen and (max-width: 1000px) {
+    .left{
+        grid-column: 1 / 11;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .right {
         grid-column: 1 / 11;
+        margin-top: 30%;
     }
     .left{
         grid-column: 1 / span 11;
-        margin-bottom: 5%;
+        margin-top: -20%;
         transform: scale(1);
     }
 }

@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
-import { useFrame } from '@react-three/fiber';
+import React, { useRef } from "react";
+import PropTypes from "prop-types";
+import { useFrame } from "@react-three/fiber";
 
 const RotatingGroup = ({ children }) => {
   const groupRef = useRef();
@@ -15,7 +15,7 @@ const RotatingGroup = ({ children }) => {
       // Applying oscillation to the x-rotation
       groupRef.current.rotation.x = oscillation * amplitude;
       // You can still keep the y-rotation if you want continuous rotation along with the oscillation
-      groupRef.current.rotation.y += 0.005; 
+      groupRef.current.rotation.y += 0.005;
     }
   });
 
@@ -23,7 +23,7 @@ const RotatingGroup = ({ children }) => {
 };
 
 RotatingGroup.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default RotatingGroup;

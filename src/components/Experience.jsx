@@ -51,7 +51,7 @@ const Experience = () => {
 
   return (
     <div className={`exp-container ${inView ? "visible" : ""}`} ref={ref}>
-      <h1>Experience</h1>
+      <h1>2 - Experience</h1>
       <div className="inner">
         <div className="vertical-tabs">
           {data.map((node, i) => {
