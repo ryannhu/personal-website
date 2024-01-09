@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/About.css";
-import image from "../images/IMG_0007.jpg";
+import image from "../images/temp.jpeg";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
