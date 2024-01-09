@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <div>
-      <div className={`about ${inView ? "about-visible" : ""}`} ref={ref}>
+      <div className={`about ${inView ? "about-visible" : ""}`} ref={ref} >
         <div className="container-about">
           <div className="item1">
             <div className="myimg">

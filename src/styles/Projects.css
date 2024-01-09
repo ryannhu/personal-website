@@ -8,7 +8,7 @@
     opacity: 0;
     transform: translateY(400px);
     transition: opacity 0.5s ease, transform 2s ease;
-    height: 100vh;
+    height: 300vh;
 }
 
 .projects.visible {
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    height: 100vh;
+    height: 300vh;
     opacity: 1;
     transform: translateY(0);
 }
@@ -76,6 +76,14 @@ body {
     .card {
       flex: 0 1 calc(33.333% - 32px); /* 3 cards in a row */
     }
+    
+    .projects.visible {
+        height: 100vh;
+    }
+
+    .projects {
+        height: 100vh;
+    }
   }
   
   /* Large devices (laptops/desktops, 992px and up) */
@@ -91,4 +99,5 @@ body {
       flex: 0 1 calc(25% - 32px); /* 4 cards in a row if needed */
     }
   }
+
   

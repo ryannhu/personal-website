@@ -15,13 +15,13 @@ const Home = () => {
       <div className="flex-items">
         <Introduction />
       </div>
-      <div className="flex-items">
+      <div className="flex-items" id="about">
         <About />
       </div>
-      <div className="flex-items">
+      <div className="flex-items" id="experience">
         <Experience />
       </div>
-      <div className="flex-items">
+      <div className="flex-items" id="projects">
         <Projects />
       </div>
       <div className="flex-items">
