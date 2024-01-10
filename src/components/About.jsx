@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <div>
-      <div className={`about ${inView ? "about-visible" : ""}`} ref={ref} >
+      <div className={`about ${inView ? "about-visible" : ""}`} ref={ref}>
         <div className="container-about">
           <div className="item1">
             <div className="myimg">
@@ -30,7 +30,8 @@ const About = () => {
               important applications of technology. I currently have expierence
               with front-end and web development with React, but I am trying to
               learn more about back-end development and machine learning.
-              Currently, I&#39;m working on a
+              Currently, I&#39;m working migrating this website to Next.js and
+              learning more about low-level programming.
             </p>
           </div>
         </div>

@@ -6,11 +6,10 @@ import "../styles/Introduction.css";
 const Introduction = () => {
   return (
     <div className="intro-container" id="home">
-      <div className="left">
-        {/* <p>text</p> */}
+      <div className="intro-left">
         <Brain />
       </div>
-      <div className="right">
+      <div className="intro-right">
         <div className="intro">
           <div className="text-container">
             <div className="intro-text">

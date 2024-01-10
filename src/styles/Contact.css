@@ -1,3 +1,14 @@
 .contact {
     height: 50vh;
 }
+
+.github-link {
+    color: #000;
+}
+
+.github-link:hover {
+    color: #c4f1f4; /* GitHub's primary green color, for example */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
