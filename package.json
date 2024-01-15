@@ -7,6 +7,7 @@
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.13",
@@ -33,7 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
-    "deploy": "npx netlify deploy --prod",
+    "deploy": "npx netlify deploy --prod build",
     "predeploy": "npm run build"
   },
   "eslintConfig": {

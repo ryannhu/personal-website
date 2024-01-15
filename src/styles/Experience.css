@@ -3,6 +3,8 @@
   transform: translateY(400px);
   transition: opacity 0.5s ease, transform 2s ease;
   height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .exp-container.visible {
@@ -15,26 +17,37 @@
   flex-direction: column;
   align-content: flex-end;
   margin-right: 20px;
+  flex-grow: 1;
+  min-width: 150px;
+  
+
   /* position: fixed; */
-  top: 23%;
+  margin-top: 3%;
   /* left: auto; / */
   right: 60%;
+  @media screen and (max-width: 800px) {
+    width: 60%;
+  }
 }
 
 .tab-button {
   padding: 10px 20px;
   /* margin-bottom: 5px; */
-  background-color: #f0f0f0;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   text-align: left;
-  width: 150px; /* Fixed width */
+  width: 100%; /* Fixed width */
   height: 40px; /* Fixed height */
   display: flex; /* Ensures fixed height applies */
+  font-weight: 400;
+  color: white;
+  font-size: larger;
 }
 
 .tab-button.active {
   background-color: #c4f1f4;
+  color: black;
   font-weight: bold;
 }
 
@@ -43,12 +56,11 @@
 }
 
 .styledTabPanels {
-  width: 30%;
+  width: 60%;
   height: 80%;
   padding: 10px 5px;
-  margin-left: 150px;
-
-  @media screen and (max-width: 600px) {
+  margin-left: 7%;
+  @media screen and (max-width: 800px) {
     width: 100%;
     margin-left: 0px;
   }
@@ -73,7 +85,7 @@
     /* align-items: center; */
     /* margin-left: 10px; */
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
