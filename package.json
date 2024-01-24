@@ -16,11 +16,10 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/three": "^0.160.0",
     "netlify-cli": "^17.10.1",
+    "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",
-    "react-router-dom": "^6.20.1",
-    "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
     "react-type-animation": "^3.2.0",
     "serve": "^14.2.1",
@@ -28,11 +27,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run format && react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run format && next start",
+    "build": "next build",
+    "dev": "next dev",
     "postbuild": "node generateRedirects.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
     "deploy": "npx netlify deploy --prod build",
     "predeploy": "npm run build"
