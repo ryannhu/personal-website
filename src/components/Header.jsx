@@ -5,7 +5,6 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hideHeader, setHideHeader] = useState(false);
 
-
   const controlHeader = () => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
