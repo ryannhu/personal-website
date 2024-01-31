@@ -2,13 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../styles/Header.css"; // Make sure to create a Header.css file for styling
 
 const Header = () => {
-  const [isNavVisible, setIsNavVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hideHeader, setHideHeader] = useState(false);
 
-  const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
-  };
 
   const controlHeader = () => {
     if (typeof window !== "undefined") {
@@ -39,7 +35,7 @@ const Header = () => {
       <div className="header-container">
         <h1>Ryan Hu</h1>
         <nav>
-          <ul className={isNavVisible ? "nav-visible" : ""}>
+          <ul>
             <li>
               <a href="#home">Home</a>
             </li>
@@ -54,11 +50,6 @@ const Header = () => {
             </li>
             <li>
               <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <button onClick={toggleNav} className="nav-toggle">
-                Menu
-              </button>
             </li>
           </ul>
         </nav>
