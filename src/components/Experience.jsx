@@ -7,7 +7,12 @@ import { useInView } from "react-intersection-observer";
 const data = [
   {
     a: "Zomp",
-    content: ["I did this!", "I did that!"],
+    content: [
+      "Developed and maintained .NET application used for analyzing gas and oil pipeline data",
+      "Created an ASP.NET API to allow remote database access, enabling the use of a shared Azure database",
+      "Designed a feature that automatically data from disk into database eliminating the need to manually add data",
+      "Improved the runtime of data generation algorithm by 80% by using multithreading and data caching",
+    ],
     date: "January 2024 - Present",
     job: "Software Developer",
   },
@@ -93,9 +98,13 @@ const Experience = () => {
                 {data[activeTab].job} @ {data[activeTab].a}
               </h2>
               <h4>{data[activeTab].date}</h4>
+              <div className="content">
               {data[activeTab].content.map((item, i) => {
-                return <p key={i}>- {item}</p>;
+                return <div className="experiencePoint">
+                <p key={i}>- {item}</p>
+                </div>;
               })}
+              </div>
             </div>
           </CSSTransition>
         </div>

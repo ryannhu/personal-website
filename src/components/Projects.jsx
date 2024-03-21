@@ -28,69 +28,39 @@ const Projects = () => {
         </div>
 
         <div className="card">
-          <h2>Digitize</h2>
+          <h2>MySpotify</h2>
           <p>
-            A 2 player C++ command line game built with the MVC architecture and
-            X11 graphics.
+            A Next.js web application that uses the Spotify API to display user
+            data and provide a dashboard for users to view their usage.
           </p>
           <div className="technologies">
-            <span>C++</span>
-            <span>X11 Graphics</span>
+            <span>Next.js</span>
+            <span>Tailwind</span>
+            <span>Vercel</span>
           </div>
         </div>
         <div className="card">
-          <h2>Digitize</h2>
+          <h2>GameBoy Emulator</h2>
           <p>
-            A 2 player C++ command line game built with the MVC architecture and
-            X11 graphics.
+            A GameBoy emulator built with C++ and the SDL library to render
+            graphics and handle input.
           </p>
           <div className="technologies">
             <span>C++</span>
-            <span>X11 Graphics</span>
+            <span>SDL2</span>
+            <span>CMake</span>
           </div>
         </div>
         <div className="card">
-          <h2>Digitize</h2>
+          <h2>Personal Website</h2>
           <p>
-            A 2 player C++ command line game built with the MVC architecture and
-            X11 graphics.
+            This website here! Built with Vite, three.js and React, and deployed
+            with Netlify.
           </p>
           <div className="technologies">
-            <span>C++</span>
-            <span>X11 Graphics</span>
-          </div>
-        </div>
-        <div className="card">
-          <h2>Digitize</h2>
-          <p>
-            A 2 player C++ command line game built with the MVC architecture and
-            X11 graphics.
-          </p>
-          <div className="technologies">
-            <span>C++</span>
-            <span>X11 Graphics</span>
-          </div>
-        </div>
-        <div className="card">
-          <h2>Digitize</h2>
-          <p>
-            A 2 player C++ command line game built with the MVC architecture and
-            X11 graphics.
-          </p>
-          <div className="technologies">
-            <span>C++</span>
-            <span>X11 Graphics</span>
-          </div>
-        </div>
-        <div className="card">
-          <h2>Digitize</h2>
-          <p>
-            A 2 player C++ command line game built with the MVC architecture and
-            X11 graphics.
-          </p>
-          <div className="technologies">
-            <span>C++</span>
-            <span>X11 Graphics</span>
+            <span>Vite</span>
+            <span>three.js</span>
+            <span>Netlify</span>
           </div>
         </div>
       </div>
