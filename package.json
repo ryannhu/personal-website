@@ -32,9 +32,9 @@
   "scripts": {
     "start": "npm run format && vite",
     "build": "vite build",
-    "postbuild": "node generateRedirects.js",
+    "postbuild": "node generateRedirects.js && cp public/manifest.json dist/",
     "format": "prettier --write \"src/**/*.js\" \"src/**/*.jsx\"",
-    "deploy": "npx netlify deploy --prod build",
+    "deploy": "netlify deploy --prod dist",
     "predeploy": "npm run build",
     "serve": "vite preview"
   },

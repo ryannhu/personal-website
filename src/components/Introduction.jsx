@@ -21,11 +21,13 @@ const Introduction = () => {
               </div>
               <TypeAnimation
                 sequence={[
+                  "I'm a Runner",
+                  2000,
                   "I'm a Developer",
                   2000,
-                  "I'm a Writer",
-                  2000,
                   "I'm a Student",
+                  2000,
+                  "I love watching baseketball!",
                   2000,
                 ]}
                 speed={30}
